@@ -5,7 +5,7 @@ public class Siakad06 {
         String nama, nim;
         char kelas;
         byte absen;
-        double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
+        double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir, nilaiUTS;
         System.out.print("Masukkan Nama : ");
         nama = sc.nextLine();
         System.out.print("Masukkan NIM :");
@@ -18,9 +18,11 @@ public class Siakad06 {
         nilaiKuis = sc.nextDouble();
         System.out.print("Masukkan Nilai Tugas : ");
         nilaiTugas = sc.nextDouble();
-        System.out.print("Masukkan Nilai Ujian : ");
+        System.out.print("Masukkan Nilai UTS: ");
+        nilaiUTS = sc.nextDouble();
+        System.out.print("Masukkan Nilai UAS : ");
         nilaiUjian = sc.nextDouble();
-        nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian)/3;
+        nilaiAkhir = (nilaiKuis*0.2)+ (nilaiTugas*0.15)+(nilaiUTS*0.3) + (nilaiUjian*0.35);
         System.out.print("Mahasiswa dengan nama " + nama + " (NIM "+ nim + ") ");
         System.out.println(" Kelas  " + kelas + " Nomor Absen  "+absen );
         System.out.print("Nilai Akhir : " + nilaiAkhir);
